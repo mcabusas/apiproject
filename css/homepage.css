@@ -1,0 +1,63 @@
+body {
+  background-image: linear-gradient(to right, #002233, white);
+}
+
+.header {
+  background-color: black;
+  text-align: center;
+  margin: 0;
+}
+.header img {
+  width: 25%;
+  height: 25%;
+}
+
+.films {
+  background-color: white;
+}
+
+.filmRow {
+  margin-top: 10px;
+  text-align: left;
+}
+.filmColumn {
+  float: left;
+  width: 50%;
+}
+
+#filmLeftColumn img {
+  width: 100%;
+  height: auto;
+}
+
+.film p {
+  margin: 0;
+}
+
+.header p {
+  margin: 0;
+}
+
+#navbar {
+  background-color: black;
+  overflow: hidden;
+}
+
+#navbar a {
+  font-size: 25px;
+  color: white;
+  display: block;
+  text-align: center;
+  float: left;
+  margin-left: 40px;
+}
+
+#navbar a:hover {
+  background-color: white;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: white;
+  color: black;
+}
