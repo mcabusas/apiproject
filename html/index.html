@@ -2,30 +2,45 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
 <body>
 
-    <div class="header">
-        <img src = "../images/logo.jpg">
+    <div id="buttonContainer">
+        <button type = "button" class="button" id="randomButton" onclick="getAllHeroes();">Random hero</button>
+
+
+        <form id="heroForm">
+            <input type="text" placeholder="Hero Name..." name="search" id="searchInput">
+            <button type="button" id="searchBtn" class ="button" onclick="searchHero(document.getElementById('searchInput').value);"><i class="fa fa-search"></i></button>
+        </form>
     </div>
-    <div id="navbar">
-        <a class="active" href="javascript:void(0)">Home</a>
-        <a href="javascript:void(0)">News</a>
-        <a href="javascript:void(0)">Contact</a>
+    
+    <div id="loader">
+
+
     </div>
 
-    <button type = "button" onclick="getFilms();">press to get films!</button>
+    <div class="content">
 
-    <div class="films">
+       <span>
+            <div class="heroRow">
+           </div>   
+       </span>
+
+       
+        
         
     </div>  
 
 
 </body>
 
-<script src = "../js/apifetch.js">
+<script type="text/javascript" src = "../js/index.js">
+
+    
 </script>
 
 <footer>

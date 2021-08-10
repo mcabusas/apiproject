@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <div class="mainContainer">
+
+        <div id="heroImgContainer">
+            <img id="heroImg">
+        </div>
+
+        <div id="heroStatsContainer">
+            <h3 id="heroName">Name: {heroName}</h3>
+
+            <div class="listTitle">
+                <h3 class="title">Powerstats</h3>
+                <button type="button" class="toggleButton" id='1' onclick="getId(this.id)">Show/Hide</button>
+            </div>
+            <ul id="stats1" style="display: none">
+            </ul>
+
+            <div class="listTitle">
+                <h3 class="title">Biography</h3>
+                <button type="button" class="toggleButton" id='2' onclick="getId(this.id)">Show/Hide</button>
+            </div>
+            <ul id="stats2" style="display: none;"></ul>
+
+            <div class="listTitle">
+                <h3 class="title">Appearance</h3>
+                <button type="button" class="toggleButton" id='3' onclick="getId(this.id)">Show/Hide</button>
+            </div>
+            <ul id="stats3" style="display: none;"></ul>
+
+            <div class="listTitle">
+                <h3 class="title">Work</h3>
+                <button type="button" class="toggleButton" id='4' onclick="getId(this.id)">Show/Hide</button>
+            </div>
+            <ul id="stats4" style="display: none;"></ul>
+
+            <div class="listTitle">
+                <h3 class="title">Connections</h3>
+                <button type="button" class="toggleButton" id='5' onclick="getId(this.id)">Show/Hide</button>
+            </div>
+            <ul id="stats5" style="display: none;"></ul>
+        </div>
+
+        
+        
+
+
+    </div>
+
+
+</body>
+<script src="../js/profile.js"></script>
+<script>
+    let queryString =  window.location.search;
+
+    console.log(queryString);
+
+    const urlParams = new URLSearchParams(queryString);
+
+    let heroId = urlParams.get('heroId');
+    console.log(`this is heroId: ${heroId}`);
+
+    heroStats(heroId);
+
+</script>

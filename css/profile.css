@@ -1,0 +1,42 @@
+.mainContainer {    
+    padding-left: 50px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    display: flex;
+    background-color: lightseagreen;
+}
+
+#heroStatsContainer{
+    flex: 1;
+    background-color:lightcyan;
+    border-radius: 25px;
+    margin-right: 50px;
+}
+#heroName {
+    padding-left: 25px;
+}
+#heroImgContainer {
+    flex: 1;
+}
+#heroImg {
+    border-radius: 50px;;
+}
+.listTitle {
+    display: flex;
+    align-items: center;
+    background-color: lightyellow;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.title {
+    flex: 1.75;
+}
+.arrowDown {
+    flex: 0.25;
+}
+.toggleButton{
+    background-color: salmon;
+    border-radius: 10px;
+    height: 50px;
+    width: 100px;
+}
