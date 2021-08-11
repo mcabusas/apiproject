@@ -1,35 +1,45 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: black;
+}
+
 .mainContainer {    
     padding-left: 50px;
     padding-bottom: 100px;
     padding-top: 100px;
     display: flex;
-    background-color: lightseagreen;
+    background-color: #1a1a1a;
 }
 
 #heroStatsContainer{
     flex: 1;
-    background-color:lightcyan;
+    background-color: #1a1a1a;
     border-radius: 25px;
     margin-right: 50px;
 }
 #heroName {
     padding-left: 25px;
+    color: white;
 }
 #heroImgContainer {
     flex: 1;
 }
 #heroImg {
-    border-radius: 50px;;
+    border-radius: 50px;
 }
 .listTitle {
     display: flex;
     align-items: center;
-    background-color: lightyellow;
+    background-color: rgba(226, 226, 202, 0.014);
     padding-left: 25px;
     padding-right: 25px;
 }
 .title {
     flex: 1.75;
+    color: white
 }
 .arrowDown {
     flex: 0.25;
@@ -39,4 +49,20 @@
     border-radius: 10px;
     height: 50px;
     width: 100px;
+}
+
+.homeButton{
+    background-color: white;
+    border-radius: 10px;
+    height: 50px;
+    width: 100px;
+}
+.favoriteButton {
+    background-color: white;
+    border-radius: 10px;
+    height: 50px;
+    width: 150px;
+}
+li{
+    color: white
 }

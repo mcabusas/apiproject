@@ -1,4 +1,5 @@
-const apiToken = "10219774809222534";   
+const apiToken = "10219774809222534";
+const path = "https://www.superheroapi.com/api.php"
 function randomWithRange() {
     return Math.floor(Math.random() * 731) + 1;
 }
@@ -8,10 +9,10 @@ function redirectToProfile(heroId){
     location.href = `profile.html?heroId=${heroId}`;   
 }
 
-async function getAllHeroes () {
+async function getAllHeroes() {
     const heroArray = [];
-    for(let i = 1; i <= 150; i++){
-        await fetch(`https://www.superheroapi.com/api.php/${apiToken}/${i}`)
+    for(let i = 1; i <= 150; i = i + 10){
+        await fetch(`${path}/${apiToken}/${i}`)
         .then(response => {
             response.json()
             .then(apiData => {
@@ -33,6 +34,7 @@ async function getAllHeroes () {
                             heroImg.setAttribute('class', 'heroImg'),
                             heroImg.src = element.image.url,
                             heroName = document.createElement('p'),
+                            heroName.setAttribute('class', "heroName")
                             heroName.innerHTML = `Name: ${element.name}`,
                             heroButton = document.createElement('button'),
                             heroButton.setAttribute('class', 'button'),
@@ -59,7 +61,7 @@ async function getAllHeroes () {
 async function getRandomHero(){
     let superId = randomWithRange();
     console.log(superId);
-        await fetch(`https://www.superheroapi.com/api.php/${apiToken}/${superId}`)
+        await fetch(`${path}/${apiToken}/${superId}`)
         .then(response => {
             response.json()
             .then(apiData => {
@@ -82,6 +84,7 @@ async function getRandomHero(){
                         heroImg.setAttribute('class', 'heroImg'),
                         heroImg.src = apiData.image.url,
                         heroName = document.createElement('p'),
+                        heroName.setAttribute('class', 'heroName'),
                         heroName.innerHTML = `Name: ${apiData.name}`,
                         heroButton = document.createElement('button'),
                         heroButton.setAttribute('class', 'button'),
@@ -112,7 +115,7 @@ async function getRandomHero(){
 
 async function searchHero(heroName){
     console.log(heroName);
-    await fetch(`https://www.superheroapi.com/api.php/10219774809222534/search/${heroName}`)
+    await fetch(`${path}/${apiToken}/search/${heroName}`)
         .then(response => {
             response.json()
             .then(apiData => {

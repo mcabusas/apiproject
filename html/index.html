@@ -9,12 +9,13 @@
 <body>
 
     <div id="buttonContainer">
-        <button type = "button" class="button" id="randomButton" onclick="getAllHeroes();">Random hero</button>
-
+        <button type = "button" class="button" id="randomButton" onclick="getRandomHero();">Random hero</button>
+        <button type = "button" class="button" id="randomButton" onclick="getAllHeroes();">All heroes</button>
 
         <form id="heroForm">
             <input type="text" placeholder="Hero Name..." name="search" id="searchInput">
             <button type="button" id="searchBtn" class ="button" onclick="searchHero(document.getElementById('searchInput').value);"><i class="fa fa-search"></i></button>
+            <i class="far fa-heart"></i>
         </form>
     </div>
     
@@ -38,9 +39,13 @@
 
 </body>
 
-<script type="text/javascript" src = "../js/index.js">
+<script type="text/javascript" src = "../js/index.js"></script>
+<script>
 
-    
+    window.onload = function() {
+        getAllHeroes();
+    }
+
 </script>
 
 <footer>
